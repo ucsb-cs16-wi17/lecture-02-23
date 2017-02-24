@@ -22,7 +22,7 @@ void printRecords(UndergradStudents records [], int numRecords){
     for(int i=0; i< numRecords; i++){
         avgGPA=0;
         for(int j=0; j< NUMGPA; j++){
-            avgGPA+=records[i].gpa[j]/NUMGPA;
+            avgGPA+=(records+i)->gpa[j]/NUMGPA;
         }
         cout<<"ID#"<<i<<", "<<records[i].lastName
             <<", "<<records[i].firstName<<" Avg GPA:"<<avgGPA<<endl;

@@ -40,6 +40,14 @@ LinkedList * arrayToLinkedList(int *a, int size) {
 
 void freeLinkedList(LinkedList * list) {
     assert(list);//Program terminates is list is NULL (false)
+    Node *p, *q;
+    p= list->head;
+    while(p){
+        q=p;
+        p = p->next;
+        delete q;
+    }
+    delete list;
 
 }
 
